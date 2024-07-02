@@ -1,8 +1,46 @@
-This is the *QRCode Service* project I made myself.
+# QR Code Generator
 
+The QR Code Generator project is a Spring Boot application designed to create QR codes dynamically based on user input. It serves as a practical exercise in learning web development with Spring Boot, handling HTTP requests, and processing images in Java.
 
-<p>This project utilizes QR codes — 2D barcodes that can store large amounts of data and are easily read by smartphones. Through this Spring Boot project, users can learn about the technology behind QR codes, generate them programmatically, and integrate them into a web service.</p><br/><br/>Learn more at <a href="https://hyperskill.org/projects/385?utm_source=ide&utm_medium=ide&utm_campaign=ide&utm_content=project-card">https://hyperskill.org/projects/385</a>
+## Project Overview:
+The QR Code Generator application allows users to generate QR codes by sending HTTP requests with the desired data and parameters.
 
-Here's the link to the project: https://hyperskill.org/projects/385
+Users can:
+- Generate QR codes from input text.
+- Specify various parameters such as size and format.
+- Retrieve QR codes in different file formats.
 
-Check out my profile: https://hyperskill.org/profile/566859162
+## Key Features:
+- **Spring Boot Framework**: The project leverages the Spring Boot framework to handle web requests and responses.
+- **QR Code Generation**: Uses the ZXing library to generate QR codes.
+- **Parameter Handling**: Accepts HTTP request parameters to customize the QR code output.
+- **HTTP Responses**: Understands and uses HTTP status codes and content types to serve files appropriately.
+
+## Technologies Used:
+- **Java**: The core programming language used for implementing the application logic.
+- **Spring Boot**: A framework for building web applications and handling HTTP requests.
+- **ZXing Library**: A library for generating QR codes.
+- **Maven**: For dependency management and building the project.
+
+## How to Run:
+To run the QR Code Generator application locally:
+
+1. Clone this repository to your local machine.
+2. Open the project in your preferred Java IDE (such as IntelliJ IDEA or Eclipse).
+3. Build and run the project using Maven or your IDE's tools.
+
+### Access the application:
+- Use a tool like `curl` or a web browser to send HTTP requests to the application.
+- Example: `http://localhost:8080/qrcode?contents=HelloWorld&size=300&type=png&correction=l`
+- The application will respond with the generated QR code image.
+
+## Example Endpoint:
+- **Endpoint**: `/generateQRCode`
+- **Parameters**:
+  - `text`: The text to encode in the QR code.
+  - `size`: The size of the QR code (e.g., `300x300`).
+  - `format`: The format of the output file (e.g., `png`, `jpg`).
+
+## Sample Request:
+```bash
+GET http://localhost:8080/qrcode?contents=HelloWorld&size=300&type=png&correction=l
