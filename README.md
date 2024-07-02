@@ -42,8 +42,7 @@ To run the QR Code Generator application locally:
   - `type` (optional) : The format of the output file (e.g., `png`, `jpg`).
   - `correction` (optional) : The error correction level of the QR code. Acceptable values are `L` (low), `M` (medium), `Q` (quartile), and `H` (high). The default value is `L`. Higher error correction levels allow the QR code to be readable even if it is partially damaged or obscured, but they reduce the amount of data that can be stored.
 - **Endpoint**: `/health`
-- **Parameters**:
-   -
+
 ## Sample Requests:
 ```bash
 GET http://localhost:8080/qrcode?contents=HelloWorld&size=300&type=png&correction=l
